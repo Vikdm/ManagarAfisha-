@@ -17,9 +17,10 @@ public class MoviesManagerTest {
     public void add() {
         movieManager.add(first);
         movieManager.add(third);
+        movieManager.add(fifth);
 
         Movies[] actual = movieManager.findAll();
-        Movies[] expected = {first, third};
+        Movies[] expected = {first, third, fifth};
 
         assertArrayEquals(actual, expected);
     }
