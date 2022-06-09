@@ -13,6 +13,12 @@ public class MoviesManagerTest {
     Movies fourth = new Movies(435, "The Green Mile", "Drama");
     Movies fifth = new Movies(25456, "King Kong", "Drama");
     Movies six = new Movies(12212, "King speak", "Drama");
+    Movies seven = new Movies(23322, "Troya", "Drama");
+    Movies eight = new Movies(47565, "Alexander", "Drama");
+    Movies nine = new Movies(5446, "Lalaland", "Music");
+    Movies ten = new Movies(54364, "Alien", "Action movie");
+    Movies eleven = new Movies(54645, "Dictator", "Comedy");
+
     @Test
     public void add() {
         movieManager.add(first);
@@ -33,12 +39,17 @@ public class MoviesManagerTest {
         movieManager.add(fourth);
         movieManager.add(fifth);
         movieManager.add(six);
+        movieManager.add(seven);
+        movieManager.add(eight);
+        movieManager.add(nine);
+        movieManager.add(ten);
+        movieManager.add(eleven);
         movieManager.showLastFilms();
 
         Movies[] actual = movieManager.showLastFilms();
-        Movies[] expexted = {six, fifth, fourth,third, second};
+        Movies[] expected = {eleven, ten, nine, eight, seven, six, fifth, fourth, third, second};
 
-        assertArrayEquals(actual,expexted);
+        assertArrayEquals(actual, expected);
 
     }
 }
