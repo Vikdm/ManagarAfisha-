@@ -12,7 +12,7 @@ public class MoviesManagerTest {
     Movies third = new Movies(1143242, "The Gentlemen", "Action movie");
     Movies fourth = new Movies(435, "The Green Mile", "Drama");
     Movies fifth = new Movies(25456, "King Kong", "Drama");
-
+    Movies six = new Movies(12212, "King speak", "Drama");
     @Test
     public void add() {
         movieManager.add(first);
@@ -31,6 +31,8 @@ public class MoviesManagerTest {
         movieManager.add(second);
         movieManager.add(third);
         movieManager.add(fourth);
+        movieManager.add(fifth);
+        movieManager.add(six);
         movieManager.showLastFilms();
 
         Movies[] actual = movieManager.showLastFilms();

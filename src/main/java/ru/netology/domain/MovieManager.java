@@ -19,7 +19,7 @@ public class MovieManager {
 
     public Movies[] showLastFilms() {
         Movies[] films = findAll();
-        Movies[] result = new Movies[2];
+        Movies[] result = new Movies[5];
 
         for (int i = 0; i < result.length; i++) {
             int index = films.length - i - 1;
