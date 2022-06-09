@@ -36,7 +36,7 @@ public class MoviesManagerTest {
         movieManager.showLastFilms();
 
         Movies[] actual = movieManager.showLastFilms();
-        Movies[] expexted = {fourth,third};
+        Movies[] expexted = {six, fifth, fourth,third, second};
 
         assertArrayEquals(actual,expexted);
 
