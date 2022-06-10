@@ -44,12 +44,57 @@ public class MoviesManagerTest {
         movieManager.add(nine);
         movieManager.add(ten);
         movieManager.add(eleven);
+        movieManager.listMovieslim(5);
         movieManager.showLastFilms();
 
         Movies[] actual = movieManager.showLastFilms();
-        Movies[] expected = {eleven, ten, nine, eight, seven, six, fifth, fourth, third, second};
+        Movies[] expected = {eleven, ten, nine, eight, seven};
 
         assertArrayEquals(actual, expected);
 
+    }
+
+    @Test
+    public void showLastFilms1() {
+        movieManager.add(first);
+        movieManager.add(second);
+        movieManager.add(third);
+        movieManager.add(fourth);
+        movieManager.add(fifth);
+        movieManager.add(six);
+        movieManager.add(seven);
+        movieManager.add(eight);
+        movieManager.add(nine);
+        movieManager.add(ten);
+        movieManager.add(eleven);
+        movieManager.listMovieslim(100);
+        movieManager.showLastFilms();
+
+        Movies[] actual = movieManager.showLastFilms();
+        Movies[] expected = {eleven, ten, nine, eight, seven, six, fifth, fourth, third, second, first};
+
+        assertArrayEquals(actual, expected);
+    }
+
+    @Test
+    public void showLastFilms2() {
+        movieManager.add(first);
+        movieManager.add(second);
+        movieManager.add(third);
+        movieManager.add(fourth);
+        movieManager.add(fifth);
+        movieManager.add(six);
+        movieManager.add(seven);
+        movieManager.add(eight);
+        movieManager.add(nine);
+        movieManager.add(ten);
+        movieManager.add(eleven);
+        movieManager.listMovieslim(11);
+        movieManager.showLastFilms();
+
+        Movies[] actual = movieManager.showLastFilms();
+        Movies[] expected = {eleven, ten, nine, eight, seven, six, fifth, fourth, third, second, first};
+
+        assertArrayEquals(actual, expected);
     }
 }
