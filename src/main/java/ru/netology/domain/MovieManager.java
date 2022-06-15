@@ -19,20 +19,16 @@ public class MovieManager {
     }
 
     public int listMovieslim(int resultLenght) {
+        if (resultLenght >= films.length) {
+            resultLenght = films.length;
+        }
         this.resultLenght = resultLenght;
         return resultLenght;
     }
 
     public Movies[] showLastFilms() {
 
-        Movies[] films = findAll();
-
-        if (resultLenght >= films.length) {
-            resultLenght = films.length;
-        }
-
         Movies[] result = new Movies[resultLenght];
-
         for (int i = 0; i < result.length; i++) {
             int index = films.length - i - 1;
             result[i] = films[index];
