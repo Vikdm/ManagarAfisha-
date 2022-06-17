@@ -3,7 +3,7 @@ package ru.netology.domain;
 public class MovieManager {
 
     private Movies[] films = new Movies[0];
-    private int resultLenght;
+
 
     public void add(Movies film) {
         int length = films.length + 1;
@@ -18,22 +18,15 @@ public class MovieManager {
         return films;
     }
 
-    public int listMovieslim(int resultLenght) {
-        if (resultLenght >= films.length) {
-            resultLenght = films.length;
+    public Movies[] showLastFilms(int resultLenght) {
+        if (resultLenght >= findAll().length) {
+            resultLenght = findAll().length;
         }
-        this.resultLenght = resultLenght;
-        return resultLenght;
-    }
-
-    public Movies[] showLastFilms() {
-
         Movies[] result = new Movies[resultLenght];
         for (int i = 0; i < result.length; i++) {
             int index = films.length - i - 1;
             result[i] = films[index];
         }
-
         return result;
     }
 }
