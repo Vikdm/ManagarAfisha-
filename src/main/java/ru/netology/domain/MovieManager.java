@@ -19,6 +19,9 @@ public class MovieManager {
         return films;
     }
 
+    public void movieLimit (){
+        resultLenght = 10;
+    }
     public void movieLimit(int resultLenght) {
         this.resultLenght = resultLenght;
     }
