@@ -33,6 +33,7 @@ public class MoviesManagerTest {
 
     @Test
     public void showLastFilms() {
+        MovieManager movieManager = new MovieManager(5);
         movieManager.add(first);
         movieManager.add(second);
         movieManager.add(third);
@@ -44,7 +45,7 @@ public class MoviesManagerTest {
         movieManager.add(nine);
         movieManager.add(ten);
         movieManager.add(eleven);
-        movieManager.movieLimit(5);
+
 
         Movies[] actual = movieManager.showLastFilms();
         Movies[] expected = {eleven, ten, nine, eight, seven};
@@ -55,6 +56,7 @@ public class MoviesManagerTest {
 
     @Test
     public void showLastFilms1() {
+        MovieManager movieManager = new MovieManager(22);
         movieManager.add(first);
         movieManager.add(second);
         movieManager.add(third);
@@ -66,7 +68,6 @@ public class MoviesManagerTest {
         movieManager.add(nine);
         movieManager.add(ten);
         movieManager.add(eleven);
-        movieManager.movieLimit(22);
 
         Movies[] actual = movieManager.showLastFilms();
         Movies[] expected = {eleven, ten, nine, eight, seven, six, fifth, fourth, third, second, first};
@@ -76,6 +77,7 @@ public class MoviesManagerTest {
 
     @Test
     public void showLastFilms2() {
+        MovieManager movieManager = new MovieManager(11);
         movieManager.add(first);
         movieManager.add(second);
         movieManager.add(third);
@@ -87,7 +89,7 @@ public class MoviesManagerTest {
         movieManager.add(nine);
         movieManager.add(ten);
         movieManager.add(eleven);
-        movieManager.movieLimit(11);
+
 
 
         Movies[] actual = movieManager.showLastFilms();

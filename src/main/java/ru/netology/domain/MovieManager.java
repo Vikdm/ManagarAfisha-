@@ -5,6 +5,12 @@ public class MovieManager {
     private Movies[] films = new Movies[0];
     private int resultLenght;
 
+    public MovieManager() {
+        resultLenght = 10;
+    }
+    public MovieManager(int resultLenght) {
+        this.resultLenght = resultLenght;
+    }
 
     public void add(Movies film) {
         int length = films.length + 1;
@@ -19,12 +25,6 @@ public class MovieManager {
         return films;
     }
 
-    public void movieLimit (){
-        resultLenght = 10;
-    }
-    public void movieLimit(int resultLenght) {
-        this.resultLenght = resultLenght;
-    }
 
     public Movies[] showLastFilms() {
         Movies[] result;
